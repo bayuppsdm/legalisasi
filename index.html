@@ -799,7 +799,7 @@ function cekKelayakan(lpk, tahun, intakindo, mitraName, lainnyaName) {
     return { status:'no_need', msg: `Sertifikat dari <strong>${LPK_NAMES['UNHAS']}</strong> tahun <strong>${tahun}</strong> tidak memerlukan legalisasi.` };
 
   if (tahun >= 2021 && tahun <= 2023 && !LPK_AMI_EXEMPT.includes(lpk))
-    return { status:'fail', reasons: [`Sertifikat tahun <strong>${tahun}</strong> (periode 2021–2023) dari LPK ini <strong>tidak dapat dilegalisasi</strong>`] };
+    return { status:'fail', reasons: [`Sertifikat tahun <strong>${tahun}</strong> dari LPK ini <strong>tidak dapat dilegalisasi</strong>`] };
 
   if (tahun < 2010 && intakindo === 'tidak')
     return { status:'fail', reasons: ['Sertifikat sebelum 2010 memerlukan sertifikat kompetensi dari INTAKINDO yang masih berlaku.'] };
